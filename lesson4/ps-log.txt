@@ -1,0 +1,384 @@
+Script started on 2024-03-24 08:07:42-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="175" LINES="45"]
+]0;ubuntu@ubuntu: ~[01;32mubuntu@ubuntu[00m:[01;34m~[00m$ ps -auc[Kx | [K[K
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3 169004 12940 ?        Ss   Mar23   0:13 /sbin/init auto noprompt
+root           2  0.0  0.0      0     0 ?        S    Mar23   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Mar23   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Mar23   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   Mar23   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   Mar23   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   Mar23   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    Mar23   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    Mar23   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    Mar23   0:01 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    Mar23   0:03 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    Mar23   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    Mar23   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    Mar23   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    Mar23   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    Mar23   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    Mar23   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    Mar23   0:00 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        S    Mar23   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   Mar23   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    Mar23   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    Mar23   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    Mar23   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   Mar23   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    Mar23   0:01 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   Mar23   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   Mar23   0:00 [khugepaged]
+root          81  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kintegrityd]
+root          82  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kblockd]
+root          83  0.0  0.0      0     0 ?        I<   Mar23   0:00 [blkcg_punt_bio]
+root          84  0.0  0.0      0     0 ?        I<   Mar23   0:00 [tpm_dev_wq]
+root          85  0.0  0.0      0     0 ?        I<   Mar23   0:00 [ata_sff]
+root          86  0.0  0.0      0     0 ?        I<   Mar23   0:00 [md]
+root          87  0.0  0.0      0     0 ?        I<   Mar23   0:00 [edac-poller]
+root          88  0.0  0.0      0     0 ?        I<   Mar23   0:00 [devfreq_wq]
+root          89  0.0  0.0      0     0 ?        S    Mar23   0:00 [watchdogd]
+root          91  0.0  0.0      0     0 ?        I<   Mar23   0:01 [kworker/0:1H-kblockd]
+root          93  0.0  0.0      0     0 ?        S    Mar23   0:00 [kswapd0]
+root          94  0.0  0.0      0     0 ?        S    Mar23   0:00 [ecryptfs-kthrea]
+root          96  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kthrotld]
+root          97  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/24-pciehp]
+root          98  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/25-pciehp]
+root          99  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/26-pciehp]
+root         100  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/27-pciehp]
+root         101  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/28-pciehp]
+root         102  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/29-pciehp]
+root         103  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/30-pciehp]
+root         104  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/31-pciehp]
+root         105  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/32-pciehp]
+root         106  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/33-pciehp]
+root         107  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/34-pciehp]
+root         108  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/35-pciehp]
+root         109  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/36-pciehp]
+root         110  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/37-pciehp]
+root         111  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/38-pciehp]
+root         112  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/39-pciehp]
+root         113  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/40-pciehp]
+root         114  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/41-pciehp]
+root         115  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/42-pciehp]
+root         116  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/43-pciehp]
+root         117  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/44-pciehp]
+root         118  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/45-pciehp]
+root         119  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/46-pciehp]
+root         120  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/47-pciehp]
+root         121  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/48-pciehp]
+root         122  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/49-pciehp]
+root         123  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/50-pciehp]
+root         124  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/51-pciehp]
+root         125  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/52-pciehp]
+root         126  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/53-pciehp]
+root         127  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/54-pciehp]
+root         128  0.0  0.0      0     0 ?        S    Mar23   0:00 [irq/55-pciehp]
+root         129  0.0  0.0      0     0 ?        I<   Mar23   0:00 [acpi_thermal_pm]
+root         131  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_0]
+root         132  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_0]
+root         133  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_1]
+root         134  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_1]
+root         136  0.0  0.0      0     0 ?        I<   Mar23   0:00 [vfio-irqfd-clea]
+root         137  0.0  0.0      0     0 ?        I<   Mar23   0:00 [mld]
+root         138  0.0  0.0      0     0 ?        I<   Mar23   0:00 [ipv6_addrconf]
+root         149  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kstrp]
+root         152  0.0  0.0      0     0 ?        I<   Mar23   0:00 [zswap-shrink]
+root         159  0.0  0.0      0     0 ?        I<   Mar23   0:00 [charger_manager]
+root         182  0.0  0.0      0     0 ?        I<   Mar23   0:01 [kworker/1:1H-kblockd]
+root         204  0.0  0.0      0     0 ?        I<   Mar23   0:00 [mpt_poll_0]
+root         205  0.0  0.0      0     0 ?        I<   Mar23   0:00 [mpt/0]
+root         206  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_2]
+root         207  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_2]
+root         208  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_3]
+root         209  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_3]
+root         210  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_4]
+root         211  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_4]
+root         212  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_5]
+root         214  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_5]
+root         215  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_6]
+root         216  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_6]
+root         217  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_7]
+root         218  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_7]
+root         219  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_8]
+root         220  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_8]
+root         221  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_9]
+root         222  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_9]
+root         223  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_10]
+root         224  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_10]
+root         225  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_11]
+root         226  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_11]
+root         227  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_12]
+root         228  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_12]
+root         229  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_13]
+root         230  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_13]
+root         231  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_14]
+root         232  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_14]
+root         233  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_15]
+root         234  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_15]
+root         235  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_16]
+root         236  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_16]
+root         237  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_17]
+root         238  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_17]
+root         239  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_18]
+root         240  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_18]
+root         241  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_19]
+root         242  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_19]
+root         243  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_20]
+root         244  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_20]
+root         245  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_21]
+root         246  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_21]
+root         247  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_22]
+root         248  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_22]
+root         249  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_23]
+root         250  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_23]
+root         251  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_24]
+root         252  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_24]
+root         253  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_25]
+root         254  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_25]
+root         255  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_26]
+root         256  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_26]
+root         257  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_27]
+root         258  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_27]
+root         259  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_28]
+root         260  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_28]
+root         261  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_29]
+root         262  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_29]
+root         263  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_30]
+root         264  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_30]
+root         265  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_31]
+root         266  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_31]
+root         293  0.0  0.0      0     0 ?        S    Mar23   0:00 [scsi_eh_32]
+root         294  0.0  0.0      0     0 ?        I<   Mar23   0:00 [scsi_tmf_32]
+root         316  0.0  0.0      0     0 ?        S    Mar23   0:02 [jbd2/sda5-8]
+root         317  0.0  0.0      0     0 ?        I<   Mar23   0:00 [ext4-rsv-conver]
+root         356  0.0  0.7  86684 29564 ?        S<s  Mar23   0:02 /lib/systemd/systemd-journald
+root         386  0.0  0.0      0     0 ?        I<   Mar23   0:00 [ttm_swap]
+root         387  0.0  0.0      0     0 ?        S    Mar23   0:01 [irq/16-vmwgfx]
+root         388  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc0]
+root         389  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc1]
+root         390  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc2]
+root         391  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc3]
+root         392  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc4]
+root         393  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc5]
+root         394  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc6]
+root         395  0.0  0.0      0     0 ?        S    Mar23   0:00 [card0-crtc7]
+root         407  0.0  0.1  24428  7724 ?        Ss   Mar23   0:01 /lib/systemd/systemd-udevd
+root         576  0.0  0.0      0     0 ?        I<   Mar23   0:00 [kworker/u257:1-hci0]
+root         590  0.0  0.0      0     0 ?        I<   Mar23   0:00 [cryptd]
+systemd+     731  0.0  0.3  24136 13400 ?        Ss   Mar23   0:00 /lib/systemd/systemd-resolved
+systemd+     732  0.0  0.1  90224  5896 ?        Ssl  Mar23   0:00 /lib/systemd/systemd-timesyncd
+root         778  0.0  0.1 238176  7164 ?        Ssl  Mar23   0:00 /usr/lib/accountsservice/accounts-daemon
+root         779  0.0  0.0   2548   700 ?        Ss   Mar23   0:00 /usr/sbin/acpid
+root         788  0.0  0.0   9424  2912 ?        Ss   Mar23   0:00 /usr/sbin/cron -f
+message+     790  0.0  0.1   9912  6380 ?        Ss   Mar23   0:04 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         799  0.0  0.0  81936  3556 ?        Ssl  Mar23   0:01 /usr/sbin/irqbalance --foreground
+root         812  0.0  0.4  39728 19492 ?        Ss   Mar23   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         814  0.0  0.2 241512 11300 ?        Ssl  Mar23   0:01 /usr/lib/policykit-1/polkitd --no-debug
+syslog       828  0.0  0.1 224352  4828 ?        Ssl  Mar23   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         839  0.0  0.7 1393368 30804 ?       Ssl  Mar23   0:03 /usr/lib/snapd/snapd
+root         841  0.0  0.1 235724  6560 ?        Ssl  Mar23   0:00 /usr/libexec/switcheroo-control
+root         849  0.0  0.2  16724  8028 ?        Ss   Mar23   0:00 /lib/systemd/systemd-logind
+root         854  0.0  0.3 392996 12340 ?        Ssl  Mar23   0:00 /usr/lib/udisks2/udisksd
+root         859  0.0  0.1  13684  4864 ?        Ss   Mar23   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root         920  0.0  0.2 314476 10700 ?        Ssl  Mar23   0:00 /usr/sbin/ModemManager
+root         934  0.0  0.5 117888 20932 ?        Ssl  Mar23   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         960  0.0  0.2 239620  8352 ?        Ssl  Mar23   0:00 /usr/sbin/gdm3
+whoopsie     996  0.0  0.3 326824 12600 ?        Ssl  Mar23   0:00 /usr/bin/whoopsie -f
+kernoops     999  0.0  0.0  11268   436 ?        Ss   Mar23   0:00 /usr/sbin/kerneloops --test
+kernoops    1004  0.0  0.0  11268   444 ?        Ss   Mar23   0:00 /usr/sbin/kerneloops
+rtkit       1038  0.0  0.0 152936  2872 ?        SNsl Mar23   0:00 /usr/libexec/rtkit-daemon
+root        1130  0.0  0.2 252120  9476 ?        Ssl  Mar23   0:00 /usr/lib/upower/upowerd
+colord      1427  0.0  0.3 860844 14588 ?        Ssl  Mar23   0:00 /usr/libexec/colord
+root        1449  0.0  0.2 314672  9592 ?        Sl   Mar23   0:00 gdm-session-worker [pam/gdm-password]
+ubuntu      1459  0.0  0.3  23688 14440 ?        Ss   Mar23   0:01 /lib/systemd/systemd --user
+ubuntu      1460  0.0  0.0 103492  2900 ?        S    Mar23   0:00 (sd-pam)
+ubuntu      1466  0.0  0.4 1745308 19376 ?       Ssl  Mar23   0:04 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+ubuntu      1468  0.0  0.5 1117732 23164 ?       SNsl Mar23   0:00 /usr/libexec/tracker-miner-fs
+ubuntu      1470  0.0  0.2  13104 10276 ?        Ss   Mar23   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ubuntu      1474  0.0  0.1 313928  7680 ?        Sl   Mar23   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+ubuntu      1477  0.0  0.1 239720  7364 ?        Ssl  Mar23   0:00 /usr/libexec/gvfsd
+ubuntu      1495  0.0  0.1 378352  5772 ?        Sl   Mar23   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+ubuntu      1502  0.0  0.2 313892  9292 ?        Ssl  Mar23   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+ubuntu      1509  0.0  0.1 235884  6108 ?        Ssl  Mar23   0:00 /usr/libexec/gvfs-goa-volume-monitor
+ubuntu      1513  0.0  0.8 553256 32464 ?        Sl   Mar23   0:00 /usr/libexec/goa-daemon
+root        1523  0.0  0.0      0     0 ?        S<   Mar23   0:00 [krfcommd]
+ubuntu      1525  0.0  0.2 314764  8100 ?        Sl   Mar23   0:00 /usr/libexec/goa-identity-service
+ubuntu      1526  0.0  0.2 316732  8996 ?        Ssl  Mar23   0:01 /usr/libexec/gvfs-afc-volume-monitor
+ubuntu      1535  0.0  0.1 235708  6088 ?        Ssl  Mar23   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+ubuntu      1539  0.0  0.1 238116  7084 ?        Ssl  Mar23   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+ubuntu      1552  0.0  0.1 164024  6476 tty2     Ssl+ Mar23   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --system
+ubuntu      1554  0.0  1.7 297912 70528 tty2     Rl+  Mar23   0:28 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -
+ubuntu      1564  0.0  0.3 188220 13588 tty2     Sl+  Mar23   0:00 /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+ubuntu      1631  0.0  0.0   6040   452 ?        Ss   Mar23   0:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --systemd -
+ubuntu      1648  0.0  0.1 305512  6508 ?        Ssl  Mar23   0:00 /usr/libexec/at-spi-bus-launcher
+ubuntu      1653  0.0  0.1   7380  4008 ?        S    Mar23   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+ubuntu      1659  0.0  0.1  90068  4400 ?        Ssl  Mar23   0:00 /usr/libexec/gnome-session-ctl --monitor
+ubuntu      1666  0.0  0.3 623336 15464 ?        Ssl  Mar23   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+ubuntu      1679  0.2  6.6 4043560 264700 ?      Rsl  Mar23   1:02 /usr/bin/gnome-shell
+ubuntu      1700  0.0  0.2 384688  8340 ?        Sl   Mar23   0:00 ibus-daemon --panel disable --xim
+ubuntu      1704  0.0  0.1 162712  6960 ?        Sl   Mar23   0:00 /usr/libexec/ibus-memconf
+ubuntu      1705  0.0  0.8 276360 32732 ?        Sl   Mar23   0:01 /usr/libexec/ibus-extension-gtk3
+ubuntu      1709  0.0  0.7 198616 28620 ?        Sl   Mar23   0:00 /usr/libexec/ibus-x11 --kill-daemon
+ubuntu      1712  0.0  0.1 236512  7104 ?        Sl   Mar23   0:00 /usr/libexec/ibus-portal
+ubuntu      1722  0.0  0.1 162840  7460 ?        Sl   Mar23   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+ubuntu      1725  0.0  0.1 235604  4684 ?        Ssl  Mar23   0:00 /usr/libexec/xdg-permission-store
+ubuntu      1730  0.0  0.4 581060 17960 ?        Sl   Mar23   0:00 /usr/libexec/gnome-shell-calendar-server
+ubuntu      1737  0.0  0.5 1070164 23740 ?       Ssl  Mar23   0:00 /usr/libexec/evolution-source-registry
+ubuntu      1747  0.0  0.7 1117176 28764 ?       Ssl  Mar23   0:00 /usr/libexec/evolution-calendar-factory
+ubuntu      1756  0.0  0.1 156208  5768 ?        Sl   Mar23   0:00 /usr/libexec/dconf-service
+ubuntu      1758  0.0  0.6 746888 26572 ?        Ssl  Mar23   0:00 /usr/libexec/evolution-addressbook-factory
+ubuntu      1777  0.0  0.6 2598552 25228 ?       Sl   Mar23   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+ubuntu      1787  0.0  0.2 313964  8212 ?        Sl   Mar23   0:00 /usr/libexec/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+ubuntu      1793  0.0  0.1 309616  6508 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-a11y-settings
+ubuntu      1794  0.0  0.7 568604 30204 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-color
+ubuntu      1797  0.0  0.3 373572 14120 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-datetime
+ubuntu      1799  0.0  0.1 311692  7364 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-housekeeping
+ubuntu      1806  0.0  0.7 346532 28844 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-keyboard
+ubuntu      1807  0.0  0.8 1164144 33276 ?       Ssl  Mar23   0:00 /usr/libexec/gsd-media-keys
+ubuntu      1808  0.0  0.7 420712 29988 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-power
+ubuntu      1812  0.0  0.2 248228 10008 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-print-notifications
+ubuntu      1813  0.0  0.1 457108  6056 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-rfkill
+ubuntu      1817  0.0  0.1 235644  5872 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-screensaver-proxy
+ubuntu      1824  0.0  0.2 464736 10492 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-sharing
+ubuntu      1830  0.0  0.1 231808  5832 ?        Sl   Mar23   0:00 /usr/libexec/gsd-disk-utility-notify
+ubuntu      1833  0.0  0.2 388848  8036 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-smartcard
+ubuntu      1842  0.0  0.2 319308  8964 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-sound
+ubuntu      1846  0.0  0.1 458652  7220 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-usb-protection
+ubuntu      1859  0.0  0.7 346088 28400 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-wacom
+ubuntu      1861  0.0  0.2 313972  7968 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-wwan
+ubuntu      1862  0.0  0.7 346528 29916 ?        Ssl  Mar23   0:00 /usr/libexec/gsd-xsettings
+ubuntu      1871  0.0  1.0 291856 40732 ?        Sl   Mar23   0:07 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+ubuntu      1876  0.0  0.1 162704  6988 ?        Sl   Mar23   0:00 /usr/libexec/ibus-engine-simple
+ubuntu      1877  0.0  1.4 646412 57404 ?        Sl   Mar23   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+ubuntu      1919  0.0  0.3 342188 14368 ?        Sl   Mar23   0:00 /usr/libexec/gsd-printer
+ubuntu      2016  0.0  0.1 162256  6252 ?        Ssl  Mar23   0:00 /usr/libexec/gvfsd-metadata
+ubuntu      2019  0.0  1.0 463788 41444 ?        Sl   Mar23   0:01 update-notifier
+root        2165  0.0  0.0   2496   568 ?        S    Mar23   0:00 bpfilter_umh
+ubuntu      2384  0.0  0.0   6040  3468 ?        S    00:01   0:00 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+nobody      7275  0.0  0.1  10164  6932 ?        Ss   00:32   0:00 /usr/sbin/openvpn --status /run/openvpn-server/status-server.log --status-version 2 --suppress-timestamps --
+root       10996  0.0  0.1   8368  5012 ?        Ss   01:17   0:00 /usr/lib/bluetooth/bluetoothd
+root       11740  0.0  0.0      0     0 ?        I<   01:17   0:00 [kworker/u257:2-hci0]
+root       21455  0.0  0.0      0     0 ?        I<   01:18   0:00 [xfsalloc]
+root       21456  0.0  0.0      0     0 ?        I<   01:18   0:00 [xfs_mru_cache]
+root       21460  0.0  0.0      0     0 ?        S    01:18   0:00 [jfsIO]
+root       21461  0.0  0.0      0     0 ?        S    01:18   0:00 [jfsCommit]
+root       21462  0.0  0.0      0     0 ?        S    01:18   0:00 [jfsCommit]
+root       21463  0.0  0.0      0     0 ?        S    01:18   0:00 [jfsSync]
+root       22129  0.0  0.2  50148  8920 ?        Ss   01:18   0:00 /usr/bin/VGAuthService
+root       22131  0.1  0.1 239520  7804 ?        Ssl  01:18   0:27 /usr/bin/vmtoolsd
+root       22174  0.0  0.0 150668   256 ?        Ssl  01:18   0:00 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root       23409  0.0  0.4 483872 17636 ?        Ssl  01:19   0:01 /usr/sbin/NetworkManager --no-daemon
+avahi      28702  0.0  0.0   8612  3184 ?        Ss   01:20   0:00 avahi-daemon: running [ubuntu.local]
+avahi      28703  0.0  0.0   8348   336 ?        S    01:20   0:00 avahi-daemon: chroot helper
+root       71629  0.0  0.2  28432  8868 ?        Ss   07:07   0:00 /usr/sbin/cupsd -l
+root       71631  0.0  0.3 176360 12672 ?        Ssl  07:07   0:00 /usr/sbin/cups-browsed
+root       73919  0.0  0.0      0     0 ?        I    07:39   0:00 [kworker/u256:1-events_unbound]
+root       73920  0.0  0.0      0     0 ?        I    07:39   0:00 [kworker/0:1-events]
+root       73929  0.1  0.0      0     0 ?        I    07:43   0:02 [kworker/1:0-events]
+root       73971  0.0  0.0      0     0 ?        R    07:44   0:00 [kworker/u256:3-events_unbound]
+ubuntu     74108  0.0  1.1 473356 47644 ?        SLl  07:54   0:00 /usr/bin/seahorse --gapplication-service
+root       74200  0.0  0.0      0     0 ?        I    07:54   0:00 [kworker/0:0-events]
+root       74218  0.0  0.0      0     0 ?        I    07:55   0:00 [kworker/1:2-events]
+root       74336  0.0  0.0      0     0 ?        I    07:59   0:00 [kworker/u256:0-events_unbound]
+ubuntu     74461  2.8  1.3 815424 51724 ?        Rsl  08:03   0:07 /usr/libexec/gnome-terminal-server
+ubuntu     74469  0.0  0.1  11140  5524 pts/0    Ss   08:03   0:00 bash
+ubuntu     74551  0.7  1.2 440184 47904 ?        Ssl  08:06   0:00 /usr/libexec/tracker-store
+root       74577  0.1  0.0      0     0 ?        I    08:06   0:00 [kworker/u256:2-events_unbound]
+ubuntu     74625  0.0  0.0   8212  2216 pts/0    S+   08:07   0:00 script lesson5.log
+ubuntu     74626  0.1  0.1  10880  5032 pts/1    Ss   08:07   0:00 bash -i
+ubuntu     74634  0.0  0.0  11688  3692 pts/1    R+   08:07   0:00 ps -aux
+]0;ubuntu@ubuntu: ~[01;32mubuntu@ubuntu[00m:[01;34m~[00m$ ps -u ubutu[K[Knti
+error: user name does not exist
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+]0;ubuntu@ubuntu: ~[01;32mubuntu@ubuntu[00m:[01;34m~[00m$ ps -u ubunti[Ku
+    PID TTY          TIME CMD
+   1459 ?        00:00:01 systemd
+   1460 ?        00:00:00 (sd-pam)
+   1466 ?        00:00:04 pulseaudio
+   1468 ?        00:00:00 tracker-miner-f
+   1470 ?        00:00:01 dbus-daemon
+   1474 ?        00:00:00 gnome-keyring-d
+   1477 ?        00:00:00 gvfsd
+   1495 ?        00:00:00 gvfsd-fuse
+   1502 ?        00:00:00 gvfs-udisks2-vo
+   1509 ?        00:00:00 gvfs-goa-volume
+   1513 ?        00:00:00 goa-daemon
+   1525 ?        00:00:00 goa-identity-se
+   1526 ?        00:00:01 gvfs-afc-volume
+   1535 ?        00:00:00 gvfs-mtp-volume
+   1539 ?        00:00:00 gvfs-gphoto2-vo
+   1552 tty2     00:00:00 gdm-x-session
+   1554 tty2     00:00:28 Xorg
+   1564 tty2     00:00:00 gnome-session-b
+   1631 ?        00:00:00 ssh-agent
+   1648 ?        00:00:00 at-spi-bus-laun
+   1653 ?        00:00:00 dbus-daemon
+   1659 ?        00:00:00 gnome-session-c
+   1666 ?        00:00:00 gnome-session-b
+   1679 ?        00:01:02 gnome-shell
+   1700 ?        00:00:00 ibus-daemon
+   1704 ?        00:00:00 ibus-memconf
+   1705 ?        00:00:01 ibus-extension-
+   1709 ?        00:00:00 ibus-x11
+   1712 ?        00:00:00 ibus-portal
+   1722 ?        00:00:00 at-spi2-registr
+   1725 ?        00:00:00 xdg-permission-
+   1730 ?        00:00:00 gnome-shell-cal
+   1737 ?        00:00:00 evolution-sourc
+   1747 ?        00:00:00 evolution-calen
+   1756 ?        00:00:00 dconf-service
+   1758 ?        00:00:00 evolution-addre
+   1777 ?        00:00:00 gjs
+   1787 ?        00:00:00 gvfsd-trash
+   1793 ?        00:00:00 gsd-a11y-settin
+   1794 ?        00:00:00 gsd-color
+   1797 ?        00:00:00 gsd-datetime
+   1799 ?        00:00:00 gsd-housekeepin
+   1806 ?        00:00:00 gsd-keyboard
+   1807 ?        00:00:00 gsd-media-keys
+   1808 ?        00:00:00 gsd-power
+   1812 ?        00:00:00 gsd-print-notif
+   1813 ?        00:00:00 gsd-rfkill
+   1817 ?        00:00:00 gsd-screensaver
+   1824 ?        00:00:00 gsd-sharing
+   1830 ?        00:00:00 gsd-disk-utilit
+   1833 ?        00:00:00 gsd-smartcard
+   1842 ?        00:00:00 gsd-sound
+   1846 ?        00:00:00 gsd-usb-protect
+   1859 ?        00:00:00 gsd-wacom
+   1861 ?        00:00:00 gsd-wwan
+   1862 ?        00:00:00 gsd-xsettings
+   1871 ?        00:00:07 vmtoolsd
+   1876 ?        00:00:00 ibus-engine-sim
+   1877 ?        00:00:00 evolution-alarm
+   1919 ?        00:00:00 gsd-printer
+   2016 ?        00:00:00 gvfsd-metadata
+   2019 ?        00:00:01 update-notifier
+   2384 ?        00:00:00 ssh-agent
+  74108 ?        00:00:00 seahorse
+  74461 ?        00:00:07 gnome-terminal-
+  74469 pts/0    00:00:00 bash
+  74551 ?        00:00:00 tracker-store
+  74625 pts/0    00:00:00 script
+  74626 pts/1    00:00:00 bash
+  74637 ?        00:00:00 tracker-extract
+  74656 pts/1    00:00:00 ps
+]0;ubuntu@ubuntu: ~[01;32mubuntu@ubuntu[00m:[01;34m~[00m$ ps -u ubuntui[4Paux [4Pexitcat lesson5.log[9Pls -la[2Pnanops -aux | grep top[5Pkill -9 74543ps -aux | grep toptop&[K
+[1] 74660
+]0;ubuntu@ubuntu: ~[01;32mubuntu@ubuntu[00m:[01;34m~[00m$ [?1l>top&[K[K[K[Kkill -9 74660
+
+[1]+  Stopped                 top
+]0;ubuntu@ubuntu: ~[01;32mubuntu@ubuntu[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2024-03-24 08:08:13-07:00 [COMMAND_EXIT_CODE="0"]

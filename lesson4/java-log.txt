@@ -1,0 +1,40 @@
+Script started on 2024-03-24 09:05:16-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="175" LINES="45"]
+]0;ubuntu@ubuntu: ~/Downloads[01;32mubuntu@ubuntu[00m:[01;34m~/Downloads[00m$ exitkill -9 74660top&[K[K[K[K[Kupdate-alternatives --config java
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      auto mode
+  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      manual mode
+* 2            /usr/lib/jvm/java-17-oracle/bin/java          1091      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 1
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in manual mode
+update-alternatives: error: error creating symbolic link '/etc/alternatives/java.dpkg-tmp': Permission denied
+]0;ubuntu@ubuntu: ~/Downloads[01;32mubuntu@ubuntu[00m:[01;34m~/Downloads[00m$ update-alternatives --config java[1@s[C[1@u[1@d[1@o[1@ 
+[sudo] password for ubuntu: 
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      auto mode
+  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      manual mode
+* 2            /usr/lib/jvm/java-17-oracle/bin/java          1091      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 1
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in manual mode
+]0;ubuntu@ubuntu: ~/Downloads[01;32mubuntu@ubuntu[00m:[01;34m~/Downloads[00m$ sudo update-alternatives --config java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@sudo [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      auto mode
+* 1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      manual mode
+  2            /usr/lib/jvm/java-17-oracle/bin/java          1091      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: ^[[B    2
+update-alternatives: using /usr/lib/jvm/java-17-oracle/bin/java to provide /usr/bin/java (java) in manual mode
+]0;ubuntu@ubuntu: ~/Downloads[01;32mubuntu@ubuntu[00m:[01;34m~/Downloads[00m$ exit
+exit
+
+Script done on 2024-03-24 09:05:51-07:00 [COMMAND_EXIT_CODE="0"]
