@@ -1,0 +1,33 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} # Переменная окружения для задания пароля root пользователя
+      MYSQL_DATABASE: ${MYSQL_DATABASE} # Переменная окружения для создания базы данных
+    volumes:
+      - - ./mysql_data:/var/lib/mysql # Хранилище для базы данных на host машине
+    networks:
+      - backend
+  app:
+    image: wordpress
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME} # Переменная окружения для базы данных Wordpress
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER} # Переменная окружения для пользователя базы данных Wordpress
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD} # Переменная окружения для пароля базы данных Wordpress
+    volumes:
+      - ./wordpress_data:/var/www/html # Хранилище для каталога Wordpress на host машине
+    networks:
+      - backend
+      - frontend
+
+  proxy:
+    image: nginx
+    volumes:
+      - ./nginx/config:/etc/nginx/conf.d # Хранилище для конфигурации Nginx на host машине
+    networks:
+      - frontend
+networks:
+  backend: # Отдельная сеть для сервисов db и app
+  frontend: # Отдельная сеть для сервиса proxy
