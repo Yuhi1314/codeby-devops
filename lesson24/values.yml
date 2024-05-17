@@ -1,0 +1,30 @@
+wordpress:
+  replicaCount: 1
+  image:
+    repository: wordpress
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 80
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 512Mi
+  ingress:
+    enabled: true
+    hosts:
+      - host: wordpress.local
+        path: /
+mysql:
+  replicaCount: 1
+  image:
+    repository: mysql
+    tag: latest
+    pullPolicy: IfNotPresent
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 512Mi
+    hostPath: /data/mysql
+    mountPath: /var/lib/mysql
