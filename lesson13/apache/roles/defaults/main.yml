@@ -1,0 +1,13 @@
+---
+# defaults file for myapache
+
+ap_extra_software:
+- python3
+- git
+
+ap_http_host_dir: "apache"
+ap_http_conf_file: apache.conf
+ap_disable_default: true
+ap_http_port: "80"
+
+ap_source_code_location: 'files'

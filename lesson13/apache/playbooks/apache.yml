@@ -1,0 +1,7 @@
+- name: install mysql
+  gather_facts: true
+  become: true
+  hosts:  localhost
+
+  roles:
+    - role: apache
