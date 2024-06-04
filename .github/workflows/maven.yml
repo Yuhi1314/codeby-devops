@@ -16,7 +16,6 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          distribution: 'adopt'
           java-version: '11'
 
       - name: Cache Maven dependencies
@@ -58,3 +57,21 @@ jobs:
             lesson26/app_jenkins/target/
             lesson26/app_devops/target/
             lesson26/app_world/target/
+
+  build-docker-image:
+    needs: build-test-package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/Yuhi1314/codeby-devops/app1:${{ github.sha }}
+            ghcr.io/Yuhi1314/codeby-devops/app2:${{ github.sha }}
+            ghcr.io/Yuhi1314/codeby-devops/app3:${{ github.sha }}
