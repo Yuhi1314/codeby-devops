@@ -4,12 +4,11 @@ RUN mkdir -p /workspace
 WORKDIR /workspace
 
 # Copy the code and build the applications
-COPY lesson26/app_jenkins /workspace/app_jenkins
-COPY lesson26/app_devops /workspace/app_devops
-COPY lesson26/app_world /workspace/app_world
+COPY lesson26/pom.xml /workspace
+
 
 # Build the applications with Maven
-RUN mvn -B -DskipTests clean package
+RUN mvn -B package --file pom.xml -DskipTests
 
 # Stage 2: Create the Docker image
 FROM openjdk:14-slim
