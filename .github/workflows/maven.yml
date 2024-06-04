@@ -74,3 +74,7 @@ jobs:
           push: true
           username: ${{ secrets.GITHUB_ACTOR }}
           password: $ ${{ secrets.GITHUB_TOKEN }}
+          tags: |
+            ghcr.io/Yuhi1314/codeby-devops/app1:${{ github.sha }}
+            ghcr.io/Yuhi1314/codeby-devops/app2:${{ github.sha }}
+            ghcr.io/Yuhi1314/codeby-devops/app3:${{ github.sha }}
