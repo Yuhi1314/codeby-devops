@@ -79,4 +79,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/Yuhi1314/codeby_devops:latest
+          tags: ghcr.io/yuhi1314/codeby_devops:latest
