@@ -3,7 +3,7 @@ RUN mkdir -p /workspace
 WORKDIR /workspace
 COPY lesson26/pom.xml /workspace
 COPY lesson26/app_devops/src /workspace/src
-RUN mvn -B package --file lesson26/pom.xml -DskipTests
+RUN mvn -B package --file pom.xml -DskipTests
 
 FROM openjdk:14-slim
 
