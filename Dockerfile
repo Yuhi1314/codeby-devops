@@ -5,6 +5,8 @@ WORKDIR /workspace
 
 # Copy the code and build the applications
 COPY lesson26/pom.xml /workspace
+COPY lesson26/app_jenkins/src /workspace/src
+
 
 
 # Build the applications with Maven
@@ -14,9 +16,8 @@ RUN mvn -B package --file pom.xml -DskipTests
 FROM openjdk:14-slim
 
 # Copy the built JAR files from the build stage
-COPY --from=build /workspace/app_jenkins/target/*jar-with-dependencies.jar /app_jenkins.jar
-COPY --from=build /workspace/app_devops/target/*jar-with-dependencies.jar /app_devops.jar
-COPY --from=build /workspace/app_world/target/*jar-with-dependencies.jar /app_world.jar
+COPY --from=build /workspace/app_jenkins/target/*.jar /app_jenkins.jar
+
 
 # Expose the necessary port(s)
 EXPOSE 6379
