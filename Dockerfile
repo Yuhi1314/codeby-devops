@@ -1,5 +1,5 @@
 # Stage 1: Build the applications
-FROM maven:3.6.3-openjdk-14-slim AS build
+FROM maven:3.8.6-jdk-11-slim AS build
 RUN mkdir -p /workspace
 WORKDIR /workspace
 
