@@ -75,7 +75,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push Docker image to GitHub Registry
         run: docker tag {{ github.sha }}:latest ghcr.io/yuhi1314/codeby-devops:{{ github.sha }}
-      - run: docker push ghcr.io/${{ github.repository }}/codeby-devops:${{ github.sha }}
+      - run: docker push ghcr.io/${{ github.repository }}/codeby-devops:${{ github.sha }}:latest
 
 
 
