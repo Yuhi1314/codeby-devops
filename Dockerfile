@@ -16,7 +16,7 @@ RUN mvn -B package --file pom.xml -DskipTests
 FROM openjdk:14-slim
 
 # Copy the built JAR files from the build stage
-COPY --from=build /workspace/app_jenkins/target/*.jar /app_jenkins.jar
+COPY --from=build /workspace/target/*.jar /app_jenkins.jar
 
 
 # Expose the necessary port(s)
