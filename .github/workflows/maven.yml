@@ -73,6 +73,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/Yuhi1314/codeby-devops/app1:${{ github.sha }}
-            ghcr.io/Yuhi1314/codeby-devops/app2:${{ github.sha }}
-            ghcr.io/Yuhi1314/codeby-devops/app3:${{ github.sha }}
+            ghcr.io/codeby-devops/app1:${{ github.sha }}
+            ghcr.io/codeby-devops/app2:${{ github.sha }}
+            ghcr.io/codeby-devops/app3:${{ github.sha }}
