@@ -1,4 +1,7 @@
 name: CI
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 on:
   push:
@@ -58,6 +61,7 @@ jobs:
             lesson26/app_jenkins/target/
             lesson26/app_devops/target/
             lesson26/app_world/target/
+ 
 
   build-docker-image:
     needs: build-test-package
@@ -66,15 +70,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+      - name: Log into the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Push Docker image to GitHub Registry
-        run: docker tag {{ github.sha }}:latest ghcr.io/yuhi1314/codeby-devops:{{ github.sha }}
-      - run: docker push ghcr.io/${{ github.repository }}/codeby-devops:${{ github.sha }}:latest
+
+      - name: Extract metadata for the Docker image
+        id: meta
+        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+  
+      - name: Build and push the Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
 
 
