@@ -16,11 +16,9 @@ RUN mvn -B package --file pom.xml -DskipTests
 # Stage 2: Create the Docker image
 FROM openjdk:14-slim
 # Copy the built JAR files from the build stage
-COPY --from=build /workspace/lesson26/app_jenkins/target/*.jar /app_jenkins.jar
-COPY --from=build /workspace/lesson26/app_world/target/*.jar /app_world.jar
-COPY --from=build /workspace/lesson26/app_devops/target/*.jar /app_devops.jar
+COPY --from=build /workspace/target/*.jar /app.jar
 # Expose the necessary port(s)
 EXPOSE 6379
 # Set the entry point and default command
 ENTRYPOINT ["java", "-jar"]
-CMD ["/app_jenkins.jar"]
+CMD ["/app.jar"]
