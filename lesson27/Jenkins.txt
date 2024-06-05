@@ -1,0 +1,157 @@
+pipeline {
+    agent {
+        label 'maven'
+    }
+    environment {
+        PATH = "${tool 'maven'}/bin:${env.PATH}"
+    }
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'Checking out code'
+                git branch: 'lesson26', changelog: false, poll: false, url: 'https://github.com/Yuhi1314/codeby-devops.git'
+            }
+        }
+        stage('Build Apps') {
+            parallel {
+                stage('Build App1') {
+                    steps {
+                        dir('lesson26/app_jenkins') {
+                            sh 'mvn -B -DskipTests clean package'
+                        }
+                    }
+                }
+                stage('Build App2') {
+                    steps {
+                        dir('lesson26/app_devops') {
+                            sh 'mvn -B -DskipTests clean package'
+                        }
+                    }
+                }
+                stage('Build App3') {
+                    steps {
+                        dir('lesson26/app_world') {
+                            sh 'mvn -B -DskipTests clean package'
+                        }
+                    }
+                }
+            }
+        }
+        stage('Test Apps') {
+            parallel {
+                stage('Test App1') {
+                    steps {
+                        dir('lesson26/app_jenkins') {
+                            sh 'mvn test'
+                        }
+                    }
+                    post {
+                        always {
+                            junit 'lesson26/app_jenkins/target/surefire-reports/*.xml'
+                        }
+                    }
+                }
+                stage('Test App2') {
+                    steps {
+                        dir('lesson26/app_devops') {
+                            sh 'mvn test'
+                        }
+                    }
+                    post {
+                        always {
+                            junit 'lesson26/app_devops/target/surefire-reports/*.xml'
+                        }
+                    }
+                }
+                stage('Test App3') {
+                    steps {
+                        dir('lesson26/app_world') {
+                            sh 'mvn test'
+                        }
+                    }
+                    post {
+                        always {
+                            junit 'lesson26/app_world/target/surefire-reports/*.xml'
+                        }
+                    }
+                }
+            }
+        }
+        stage('Deliver App1') {
+            steps {
+                dir('lesson26/app_jenkins') {
+                    sh 'chmod +x ./jenkins/scripts/deliver.sh'
+                    sh './jenkins/scripts/deliver.sh'
+                }
+            }
+        }
+        stage('Deliver App2') {
+            steps {
+                dir('lesson26/app_devops') {
+                    sh 'chmod +x ./jenkins/scripts/deliver.sh'
+                    sh './jenkins/scripts/deliver.sh'
+                }
+            }
+        }
+        stage('Deliver App3') {
+            steps {
+                dir('lesson26/app_world') {
+                    sh 'chmod +x ./jenkins/scripts/deliver.sh'
+                    sh './jenkins/scripts/deliver.sh'
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            parallel {
+                stage('SonarQube Analysis App1') {
+                    steps {
+                        dir('lesson26/app_jenkins') {
+                            withSonarQubeEnv(credentialsId: 'sonar', installationName: 'SonarServer') {
+                                sh "mvn clean verify sonar:sonar -Dsonar.projectKey=maven -Dsonar.projectName='maven'"
+                            }
+                        }
+                    }
+                }
+                stage('SonarQube Analysis App2') {
+                    steps {
+                        dir('lesson26/app_devops') {
+                            withSonarQubeEnv(credentialsId: 'sonar', installationName: 'SonarServer') {
+                                sh "mvn clean verify sonar:sonar -Dsonar.projectKey=maven -Dsonar.projectName='maven'"
+                            }
+                        }
+                    }
+                }
+                stage('SonarQube Analysis App3') {
+                    steps {
+                        dir('lesson26/app_world') {
+                            withSonarQubeEnv(credentialsId: 'sonar', installationName: 'SonarServer') {
+                                sh "mvn clean verify sonar:sonar -Dsonar.projectKey=maven -Dsonar.projectName='maven'"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        stage('Quality Gate App1') {
+            steps {
+                dir('lesson26/app_jenkins') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+        stage('Quality Gate App2') {
+            steps {
+                dir('lesson26/app_devops') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+        stage('Quality Gate App3') {
+            steps {
+                dir('lesson26/app_world') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+    }
+}
