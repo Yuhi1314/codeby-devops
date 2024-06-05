@@ -5,9 +5,9 @@ WORKDIR /workspace
 COPY lesson26/pom.xml /workspace
 COPY lesson26/app_jenkins/src /workspace/src
 RUN mvn -B package --file pom.xml -DskipTests
-# Copy the code and build the app_hello application
-COPY lesson26/app_hello/pom.xml /workspace
-COPY lesson26/app_hello/src /workspace/src
+# Copy the code and build the app_world application
+COPY lesson26/app_world/pom.xml /workspace
+COPY lesson26/app_world/src /workspace/src
 RUN mvn -B package --file pom.xml -DskipTests
 # Copy the code and build the app_devops application
 COPY lesson26/app_devops/pom.xml /workspace
@@ -17,7 +17,7 @@ RUN mvn -B package --file pom.xml -DskipTests
 FROM openjdk:14-slim
 # Copy the built JAR files from the build stage
 COPY --from=build /workspace/lesson26/app_jenkins/target/*.jar /app_jenkins.jar
-COPY --from=build /workspace/lesson26/app_hello/target/*.jar /app_hello.jar
+COPY --from=build /workspace/lesson26/app_world/target/*.jar /app_world.jar
 COPY --from=build /workspace/lesson26/app_devops/target/*.jar /app_devops.jar
 # Expose the necessary port(s)
 EXPOSE 6379
