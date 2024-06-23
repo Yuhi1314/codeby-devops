@@ -4,7 +4,7 @@ pipeline {
   environment {
     registry = "yuhi1314/phpk8s"
     registry_fl = "yuhi1314/fluentd-agent"
-    registryCredential = '18ae2b99-8309-4c65-a727-c424f1fd8e71'
+    registryCredential = 'b53f99dc-0066-457d-af6c-79cc14a27442'
     dockerImage = ''
   }
   tools {
