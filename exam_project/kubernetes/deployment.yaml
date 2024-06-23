@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: hello-world-service
+  name: hello-world-service
+  labels:
+    app: hello-world-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-service
+  template:
+    metadata:
+      labels:
+        app: hello-world-service
+    spec:
+      containers:
+      - image: yuhi1314/phpk8s:20
+        name: hello-world-service
+        volumeMounts:
+            -
+              mountPath: /logs
+              name: access-logs
+        ports:
+        - containerPort: 8080
+      - name: fluentd-agent
+        image: yuhi1314/fluentd-agent:33
+        ports:
+        - containerPort: 24224
+        volumeMounts:
+        - mountPath: /logs
+          name: access-logs
+      volumes:
+      - name: access-logs
+        emptyDir: {}
+
